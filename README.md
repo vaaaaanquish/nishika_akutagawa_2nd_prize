@@ -4,9 +4,9 @@ This repo is [【Nishika自社開催コンペ】AIは芥川龍之介を見分け
 
 ## Architecture
 
-I use pipline lib *gokart* (https://github.com/m3dev/gokart).  
+I use pipline lib *gokart* : https://github.com/m3dev/gokart.  
 
-![flow](http://hoge.jpg "flow")
+![flow](https://github.com/vaaaaanquish/nishika_akutagawa_2nd_prize/blob/master/img/ponchie.png?raw=true "flow")
 
 
 ## Usage
@@ -15,7 +15,8 @@ I use pipline lib *gokart* (https://github.com/m3dev/gokart).
 ```
 $ mkdir data
 ```
-https://www.nishika.com/competitions/1/data -> train.csv, test.csv
+Get train.csv, test.csv from `https://www.nishika.com/competitions/1/data`  
+Set csv files in `./data` dir.  
 
 2. docker run
 ```
