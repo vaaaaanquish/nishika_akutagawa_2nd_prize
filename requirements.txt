@@ -1,0 +1,17 @@
+gokart==0.3.8
+redshells==0.1.16
+swifter==0.295
+kanjize==0.0.2
+jeraconv==0.2.1
+regex==2019.12.20
+tiny_tokenizer==3.1.0
+xgboost==0.90
+torch==1.3.1
+pyknp==0.4.1
+pytorch-pretrained-bert==0.6.2
+lightgbm==2.3.1
+catboost==0.20.2
+requests==2.22.0
+skorch==0.7.0
+scikit-learn==0.21.3
+thunderbolt==0.0.22
