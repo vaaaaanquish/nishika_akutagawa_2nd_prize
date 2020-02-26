@@ -2,9 +2,9 @@ from logging import getLogger
 
 import pandas as pd
 from luigi.util import inherits
+from nishika.data.tasks.load_data import LoadTestData
 from nishika.model.train_bi_nn import TrainNN, MakeStandardScalar
-from nishika.data.load_data import LoadTestData
-from nishika.model.feature_selection import MakeTestSelectionFeatureData
+from nishika.model.lgbm_feature_selection import MakeTestSelectionFeatureData
 from nishika.utils.base import Nishika
 import numpy as np
 

@@ -2,8 +2,8 @@ from logging import getLogger
 
 import pandas as pd
 from luigi.util import inherits
-from nishika.model.feature_selection import MakeTestSelectionFeatureData, MakeTestFeatureData
-from nishika.data.load_data import LoadTestData
+from nishika.data.tasks.load_data import LoadTestData
+from nishika.model.lgbm_feature_selection import MakeTestSelectionFeatureData, MakeTestFeatureData
 from nishika.model.train_bi_xgb import TrainXGB, TrainNonSelectionXGB
 from nishika.utils.base import Nishika
 import swifter  # noqa

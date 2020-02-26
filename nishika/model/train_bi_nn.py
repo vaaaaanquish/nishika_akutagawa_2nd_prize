@@ -3,7 +3,7 @@ from logging import getLogger
 import numpy as np
 from luigi.util import inherits
 from skorch.classifier import NeuralNetBinaryClassifier
-from nishika.model.feature_selection import MakeTrainSelectionFeatureData, MakeTestSelectionFeatureData
+from nishika.model.lgbm_feature_selection import MakeTrainSelectionFeatureData, MakeTestSelectionFeatureData
 from nishika.utils.base import Nishika
 from torch import nn
 import torch.nn.functional as F

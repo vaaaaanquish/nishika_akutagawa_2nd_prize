@@ -3,7 +3,7 @@ from logging import getLogger
 import gokart
 import redshells
 from luigi.util import inherits
-from nishika.model.feature_selection import MakeTrainSelectionFeatureData
+from nishika.model.lgbm_feature_selection import MakeTrainSelectionFeatureData
 from nishika.utils.base import Nishika
 
 logger = getLogger(__name__)

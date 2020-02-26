@@ -2,9 +2,9 @@ from logging import getLogger
 
 import pandas as pd
 from luigi.util import inherits
+from nishika.data.tasks.load_data import LoadTestData
 from nishika.model.train_bi_lgbm import TrainSelectedLGBM
-from nishika.data.load_data import LoadTestData
-from nishika.model.feature_selection import MakeTestSelectionFeatureData, TrainLGBM, MakeTestFeatureData
+from nishika.model.lgbm_feature_selection import MakeTestSelectionFeatureData, TrainLGBM, MakeTestFeatureData
 from nishika.utils.base import Nishika
 
 logger = getLogger(__name__)
