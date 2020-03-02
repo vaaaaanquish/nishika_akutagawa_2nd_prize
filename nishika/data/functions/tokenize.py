@@ -147,8 +147,8 @@ def get_words(tokenizer, document):
     return keywords
 
 
-def tokenize_text(text, words=False):
+def tokenize_text(mecab, text, words=False):
     text = neologdn.normalize(text)
     if words:
-        return [x for x in get_words(self.mecab, text) if _filter(x)]
-    return [x for x in self.mecab.parse(text).split(' ') if _filter(x)]
+        return [x for x in get_words(mecab, text) if _filter(x)]
+    return [x for x in mecab.parse(text).split(' ') if _filter(x)]
