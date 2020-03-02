@@ -36,7 +36,8 @@ ENTRYPOINT python
 # files
 WORKDIR /
 COPY ./conf /app/conf
-COPY ./data /app/data
+COPY ./data/train.csv /app/data/train.csv
+COPY ./data/test.csv /app/data/test.csv
 COPY ./nishika /app/nishika
 COPY ./main.py /app/main.py
 COPY ./run.sh /app/run.sh
