@@ -1,7 +1,7 @@
 from logging import getLogger
 
 import redshells
-import gokart
+import luigi
 from luigi.util import inherits
 from nishika.model.lgbm_feature_selection import MakeTrainSelectionFeatureData, MakeTrainFeatureData
 from nishika.utils.base import Nishika
@@ -34,7 +34,7 @@ class TrainXGB(Nishika):
         data = self.clone(MakeTrainSelectionFeatureData)
         task = self.clone(TrainOptimizeXGB)
         if not task.complete():
-            gokart.build([task], local_scheduler=True)
+            luigi.build([task], local_scheduler=True)
         param = task.output().load()
         return redshells.train.TrainClassificationModel(rerun=True,
                                                         train_data_task=data,
@@ -71,7 +71,7 @@ class TrainNonSelectionXGB(Nishika):
         data = self.clone(MakeTrainFeatureData)
         task = self.clone(TrainNonSelectionOptimizeXGB)
         if not task.complete():
-            gokart.build([task], local_scheduler=True)
+            luigi.build([task], local_scheduler=True)
         param = task.output().load()
         return redshells.train.TrainClassificationModel(rerun=True,
                                                         train_data_task=data,

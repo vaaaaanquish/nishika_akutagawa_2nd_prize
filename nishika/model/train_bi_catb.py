@@ -1,6 +1,6 @@
 from logging import getLogger
 
-import gokart
+import luigi
 import redshells
 from luigi.util import inherits
 from nishika.model.lgbm_feature_selection import MakeTrainSelectionFeatureData
@@ -32,7 +32,7 @@ class TrainCATB(Nishika):
         data = self.clone(MakeTrainSelectionFeatureData)
         task = self.clone(TrainOptimizeCATB)
         if not task.complete():
-            gokart.build([task], local_scheduler=True)
+            luigi.build([task], local_scheduler=True)
         param = task.output().load()
         return redshells.train.TrainClassificationModel(rerun=True,
                                                         train_data_task=data,
