@@ -48,4 +48,7 @@ class MakeTestFeatureData(FeatuerBase):
         scdv_f, tf_f, lda_f, data_f, tft_f, bert_f, word_f = add_nlp_feature(self.load('test'), self.load('scdv'), self.load('tfidf'), self.load('lda'),
                                                                              self.load('wf'), self.tfidf_top_k, self.train_cols, self.load('bert'), self.words)
 
-        self.dump([np.concatenate([scdv_f, tf_f, lda_f, data_f, tft_f, bert_f, word_f], 1)])
+        self.dump([
+            np.append(np.append(np.append(np.append(np.append(np.append(x, y), z), w), k), b), f)
+            for x, y, z, w, k, b, f in zip(scdv_f, tf_f, lda_f, data_f, tft_f, bert_f, word_f)
+        ])
